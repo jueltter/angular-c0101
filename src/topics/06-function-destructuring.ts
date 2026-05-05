@@ -39,8 +39,14 @@ const [total, tax] = taxtCalculation({
     products: shoppingCart
 });
 
-console.log('Total: ',total);
-console.log('Tax: ',tax);
+//console.log('Total: ',total);
+//console.log('Tax: ',tax);
+
+
+export {
+    taxtCalculation
+};
+export type { Product };
 
 
 
@@ -52,9 +58,3 @@ console.log('Tax: ',tax);
 
 
 
-
-
-
-
-
-export {};
