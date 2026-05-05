@@ -32,6 +32,14 @@ const {
 
 const { author: auth } = details;
 
-console.log({ anotherSong, duration, auth });
+//console.log({ anotherSong, duration, auth });
+
+const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
+
+const [ p1, p2, p3 ] = dbz;
+
+const [ , , , trunks = 'Not Found' ] = dbz;
+
+console.log({ p1, p2, p3, trunks });
 
 export {};
