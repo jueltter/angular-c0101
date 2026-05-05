@@ -22,23 +22,25 @@ interface TaxCalculationOptions {
 }
 
 
-function taxtCalculation(options: TaxCalculationOptions) : number[] {
+function taxtCalculation(options: TaxCalculationOptions) : [number, number] {
+    const { taxt, products } = options;
+    
     let total = 0;
 
-    options.products.forEach( ({ price }) => {
+    products.forEach( ({ price }) => {
         total += price;
     });
 
-    return [total, total * options.taxt];
+    return [total, total * taxt];
 }
 
-const result = taxtCalculation({
+const [total, tax] = taxtCalculation({
     taxt,
     products: shoppingCart
 });
 
-console.log('Total: ',result[0]);
-console.log('Tax: ',result[1]);
+console.log('Total: ',total);
+console.log('Tax: ',tax);
 
 
 
