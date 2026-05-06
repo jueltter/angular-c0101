@@ -10,20 +10,35 @@ export class Person {
     }
 }
 
-export class Hero extends Person {
+// export class Hero extends Person {
+//     constructor(
+//         public alterEgo: string,
+//         public age: number,
+//         public realName: string
+//     ) {
+        
+
+//         super(realName, 'Unknown');
+//     }
+// }
+
+
+export class Hero {
+    // public person: Person;
+
     constructor(
         public alterEgo: string,
         public age: number,
-        public realName: string
+        public realName: string,
+        public person: Person
     ) {
         
-
-        super(realName, 'Unknown');
+        this.person = person;
+        
     }
 }
 
-const person1 = new Hero("Alice", 30, "Alice Smith"); 
-const person2 = new Hero("Bob", 25, "Bob Johnson");
+const person = new Person("Alice Smith", "123 Main St");
+const hero = new Hero("Alice", 30, "Alice Smith", person);
 
-console.log(person1);
-console.log(person2);
+console.log(hero);
